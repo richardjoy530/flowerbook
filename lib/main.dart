@@ -123,46 +123,167 @@ class _HomePageState extends State<HomePage>
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(50),
                             bottomRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(50),
                           ),
                           child: Container(
-                            color: Color(0xfff1f5f8),
                             height: 170,
+                            color: Colors.grey,
                             child: Stack(
                               children: <Widget>[
                                 Align(
-                                  alignment: Alignment.bottomRight,
                                   child: Image.asset(
                                     'images/monstra.jpg',
-                                    fit: BoxFit.fitWidth,
                                     width: 400,
+                                    fit: BoxFit.fitWidth,
                                   ),
                                 ),
                                 Align(
                                   alignment: Alignment.topLeft,
                                   child: IconButton(
-                                      icon: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.black,
-                                      ),
+                                      icon: Icon(Icons.favorite_border,
+                                          color: Colors.black),
                                       onPressed: null),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                    left: 20,
-                                    bottom: 15,
-                                    top: 10,
+                                      left: 20, bottom: 15, top: 10),
+                                  child: Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          'Monstera',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 25),
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            CircleAvatar(
+                                              radius: 10,
+                                              backgroundImage: AssetImage(
+                                                  'images/avatar.jpeg'),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(left:8.0),
+                                              child: Text('by Kate B.',style: TextStyle(fontWeight: FontWeight.w600),),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(50),
+                          ),
+                          child: Container(
+                            height: 170,
+                            color: Colors.grey,
+                            child: Stack(
+                              children: <Widget>[
+                                Align(
+                                  child: Image.asset(
+                                    'images/suculents.jpg',
+                                    width: 400,
+                                    fit: BoxFit.fitWidth,
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: IconButton(
+                                      icon: Icon(Icons.favorite,
+                                          color: Colors.red),
+                                      onPressed: null),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 20, bottom: 15, top: 10),
                                   child: Align(
                                     alignment: Alignment.bottomLeft,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
+                                      children: <Widget>[
                                         Text(
-                                          'Monstera',
+                                          'Suculents',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 25),
+                                        ),
+                                        Row(
+                                          children: <Widget>[
+                                            CircleAvatar(
+                                              radius: 10,
+                                              backgroundImage: AssetImage(
+                                                  'images/women2.jpg'),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(left:8.0),
+                                              child: Text('by Amanda B.',style: TextStyle(fontWeight: FontWeight.w600),),
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomLeft: Radius.circular(50),
+                          ),
+                          child: Container(
+                            height: 170,
+                            child: Stack(
+                              children: <Widget>[
+                                Align(
+                                  child: Image.asset(
+                                    'images/aloevera.jpg',
+                                    width: 400,
+                                    fit: BoxFit.fitWidth,
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: IconButton(
+                                      icon: Icon(Icons.favorite_border,
+                                          color: Colors.black),
+                                      onPressed: null),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 20, bottom: 15, top: 10),
+                                  child: Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          'Aloe Vera',
                                           style: TextStyle(
                                               fontSize: 25,
                                               fontWeight: FontWeight.bold),
@@ -175,177 +296,15 @@ class _HomePageState extends State<HomePage>
                                                   'images/avatar.jpeg'),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 8.0),
-                                              child: Text(
-                                                'by Kate B.',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              ),
+                                              padding: const EdgeInsets.only(left:8.0),
+                                              child: Text('by Kate B.',style: TextStyle(fontWeight: FontWeight.w600),),
                                             )
                                           ],
                                         ),
                                       ],
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(10),
-                          ),
-                          child: Container(
-                            color: Color(0xfff1f5f8),
-                            height: 170,
-                            child: Stack(
-                              children: <Widget>[
-                                Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Image.asset(
-                                    'images/suculents.jpg',
-                                    fit: BoxFit.fitWidth,
-                                    width: 400,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: IconButton(
-                                      icon: Icon(
-                                        Icons.favorite,
-                                        color: Colors.red,
-                                      ),
-                                      onPressed: null),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    bottom: 15,
-                                    top: 10,
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.bottomLeft,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          'Suculents',
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Row(
-                                          children: <Widget>[
-                                            CircleAvatar(
-                                              radius: 10,
-                                              backgroundImage: AssetImage(
-                                                  'images/women2.jpg'),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 8.0),
-                                              child: Text(
-                                                'by Amanda F.',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(10),
-                          ),
-                          child: Container(
-                            color: Color(0xfff1f5f8),
-                            height: 170,
-                            child: Stack(
-                              children: <Widget>[
-                                Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: Image.asset(
-                                    'images/aloevera.jpg',
-                                    width: 400,
-                                    fit: BoxFit.fitWidth,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: IconButton(
-                                      icon: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.black,
-                                      ),
-                                      onPressed: null),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    bottom: 15,
-                                    top: 10,
-                                  ),
-                                  child: Align(
-                                    alignment: Alignment.bottomLeft,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          'Aloe Vera',
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Row(
-                                          children: <Widget>[
-                                            CircleAvatar(
-                                              radius: 10,
-                                              backgroundImage: AssetImage(
-                                                  'images/women2.jpg'),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 8.0),
-                                              child: Text(
-                                                'by Amanda F.',
-                                                style: TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.w600),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                )
                               ],
                             ),
                           ),
@@ -353,10 +312,10 @@ class _HomePageState extends State<HomePage>
                       )
                     ],
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
